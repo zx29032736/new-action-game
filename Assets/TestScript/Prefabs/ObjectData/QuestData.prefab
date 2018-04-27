@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1470706469727738}
+  m_IsPrefabParent: 1
+--- !u!1 &1470706469727738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4549073437971950}
+  - component: {fileID: 114642934604919478}
+  m_Layer: 0
+  m_Name: QuestData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4549073437971950
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470706469727738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 909, y: 835.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114642934604919478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470706469727738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae3befd1ba029643b04c97a10546308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - questName: Quest 01
+    questID: 1
+    questDescription: first quest for testing kill monsters
+    killEnemyQuestConditions:
+    - requiredMonsterName: Dark Knight
+      requiredCount: 3
+      currentCount: 0
+    - requiredMonsterName: Sickle Girl
+      requiredCount: 3
+      currentCount: 0
+    handInItemQuestConditions: []
+    rewardExp: 10
+    rewardGold: 10
+    rewarnItemName:
+    - sword
+  - questName: Quest 02
+    questID: 2
+    questDescription: second quest for testing hand in items
+    killEnemyQuestConditions: []
+    handInItemQuestConditions:
+    - requiredItemName: sword
+      requiedCount: 1
+      currentCount: 0
+    - requiredItemName: shoe
+      requiedCount: 1
+      currentCount: 0
+    rewardExp: 20
+    rewardGold: 10
+    rewarnItemName:
+    - armor
+    - shoe
+  - questName: Quest 03
+    questID: 2
+    questDescription: thrid quest for testing both conditions
+    killEnemyQuestConditions:
+    - requiredMonsterName: Gun Man
+      requiredCount: 2
+      currentCount: 0
+    handInItemQuestConditions:
+    - requiredItemName: shoe
+      requiedCount: 1
+      currentCount: 0
+    rewardExp: 20
+    rewardGold: 10
+    rewarnItemName: []
